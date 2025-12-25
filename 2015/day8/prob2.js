@@ -1,43 +1,36 @@
 const rawData = Deno.readTextFileSync("input.txt");
 
-const getASCII = (value) => {
-  return "|";
-};
-
 const knownCharWithLen = {
-  "\\\\": {
+  "\\": {
     length: 2,
-    getChar: () => "\\",
+    getChar: () => "\\\\",
   },
 
-  "\\x": {
-    length: 4,
-    getChar: getASCII,
-  },
+  // "\\x": {
+  //   length: 4,
+  //   getChar: getASCII,
+  // },
 
-  '\\"': {
-    length: 2,
-    getChar: () => '"',
+  '"': {
+    length: 1,
+    getChar: () => '\\"',
   },
 };
+
 const isKnown = (value) => Object.keys(knownCharWithLen).includes(value);
 const getEachLineLen = (sentence) => {
   const values = [];
-  let index = 2;
 
-  while (index < sentence.length) {
-    const lastTwoChar = sentence.slice(index - 1, index + 1);
-
-    if (isKnown(lastTwoChar)) {
-      const obj = knownCharWithLen[lastTwoChar];
-      index += obj.length;
-      values.push(obj.getChar(lastTwoChar));
+  for (const char of sentence) {
+    if (isKnown(char)) {
+      values.push(knownCharWithLen[char].getChar(char));
     } else {
-      values.push(sentence[index - 1]);
-      index++;
+      values.push(char);
     }
   }
-  return values.join("");
+  console.log(values.join(""));
+
+  return '"' + values.join("") + '"';
 };
 // const val = getEachLineLen(rawData);
 
@@ -46,9 +39,10 @@ const datas = rawData.split("\n");
 const newVals = datas.map(getEachLineLen);
 const prevLen = datas.reduce((s, e) => s + e.length, 0);
 const newLen = newVals.reduce((s, e) => s + e.length, 0);
+
 console.log({ prevLen });
 console.log({ newLen });
-console.log({ v: prevLen - newLen });
+console.log({ v: newLen - prevLen });
 
 // console.log(rawData);
 // console.log(val);
