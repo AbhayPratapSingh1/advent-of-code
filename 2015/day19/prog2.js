@@ -49,13 +49,9 @@ const createFormulat = (created, conversion, formula, i = 0) => {
   let minSteps = Infinity;
 
   for (let index = 0; index < conversion.length; index++) {
-    if (i === 1) {
-      console.log(index);
-    }
-
     let offset = 0;
 
-    while (offset !== created.length) {
+    while (offset < created.length) {
       const { formula: newFormula, offset: newOffset } = createUsingOneReplace(
         created,
         offset,
@@ -73,6 +69,7 @@ const createFormulat = (created, conversion, formula, i = 0) => {
       }
     }
   }
+  console.log("here");
 
   return minSteps + 1;
 };
