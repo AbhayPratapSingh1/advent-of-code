@@ -31,7 +31,7 @@ const findMaxContinuousValue = (values = [], needed) => {
   );
 
   const sortedValues = possibleValues.toSorted((a, b) => b - a);
-  return maxValue * 10 + sortedValues[0];
+  return Number(maxValue.toString() + sortedValues[0].toString());
 };
 
 const sum = (numbers) => 
@@ -41,7 +41,7 @@ const sum = (numbers) =>
 const findMaxValuesSum = () => {
   const maxValues = [];
   for (let index = 0; index < data.length; index++) {
-    const maxValue = findMaxContinuousValue(data[index], 2);
+    const maxValue = findMaxContinuousValue(data[index], 12);
     maxValues.push(maxValue);
   }
   return sum(maxValues);
