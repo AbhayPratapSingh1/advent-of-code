@@ -1,16 +1,21 @@
-const input = Deno.readTextFileSync("./input.txt");
+const SAMPLES = {
+  "INPUT": "./input.txt",
+  "SAMPLE": "./sample.txt",
+};
 
-const data = input.split("\n");
+const input = Deno.readTextFileSync(SAMPLES.SAMPLE);
 
-const findMaxContinuousValue = (values, needed) => {
+const data = input.split("\n").map((each) =>
+  each.split("").map((num) => Number(num))
+);
+
+const findMaxContinuousValue = (values = [], needed) => {
   if (needed === 1) {
     return Math.max(...values);
   }
 
-  const valueCandidates = values
-    .slice(0, values.length - (needed - 1))
-    .split("")
-    .map((each) => +each);
+  const lastPossibleCandidateIndex = values.length - (needed - 1)
+  const valueCandidates = values.slice(0, lastPossibleCandidateIndex)
 
   const maxValuesIndexes = [];
   const maxValue = Math.max(...valueCandidates);
@@ -28,8 +33,8 @@ const findMaxContinuousValue = (values, needed) => {
   return maxValue.toString() + maxOne[0].toString();
 };
 
+console.log(data)
 for (let index = 0; index < data.length; index++) {
   console.log(index);
-
-  console.log(findMaxContinuousValue(data[index], 12));
+  console.log(findMaxContinuousValue(data[index], 2));
 }
