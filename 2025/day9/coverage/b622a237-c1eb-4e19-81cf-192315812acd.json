@@ -1,0 +1,17 @@
+{
+  "scriptId": "237",
+  "url": "file:///Users/abhaypratapsingh/workspace/personal/advent-of-code/2025/day9/tests/problems.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 2531,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

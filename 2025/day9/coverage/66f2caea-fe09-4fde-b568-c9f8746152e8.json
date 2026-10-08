@@ -1,0 +1,17 @@
+{
+  "scriptId": "236",
+  "url": "file:///Users/abhaypratapsingh/workspace/personal/advent-of-code/2025/day9/tests/edge-cases.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 1971,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

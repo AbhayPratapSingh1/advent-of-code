@@ -1,0 +1,17 @@
+{
+  "scriptId": "234",
+  "url": "file:///Users/abhaypratapsingh/workspace/personal/advent-of-code/2025/day9/tests/inside.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 8694,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

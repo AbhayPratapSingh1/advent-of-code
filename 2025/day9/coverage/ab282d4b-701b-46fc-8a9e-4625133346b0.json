@@ -1,0 +1,126 @@
+{
+  "scriptId": "230",
+  "url": "file:///Users/abhaypratapsingh/workspace/personal/advent-of-code/2025/day9/test.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 3124,
+          "count": 1
+        },
+        {
+          "startOffset": 2904,
+          "endOffset": 3123,
+          "count": 4
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "execute",
+      "ranges": [
+        {
+          "startOffset": 1903,
+          "endOffset": 2856,
+          "count": 111
+        },
+        {
+          "startOffset": 1955,
+          "endOffset": 1986,
+          "count": 12
+        },
+        {
+          "startOffset": 1988,
+          "endOffset": 2054,
+          "count": 0
+        },
+        {
+          "startOffset": 2109,
+          "endOffset": 2148,
+          "count": 12
+        },
+        {
+          "startOffset": 2148,
+          "endOffset": 2332,
+          "count": 99
+        },
+        {
+          "startOffset": 2238,
+          "endOffset": 2326,
+          "count": 0
+        },
+        {
+          "startOffset": 2382,
+          "endOffset": 2386,
+          "count": 24
+        },
+        {
+          "startOffset": 2387,
+          "endOffset": 2405,
+          "count": 87
+        },
+        {
+          "startOffset": 2515,
+          "endOffset": 2536,
+          "count": 87
+        },
+        {
+          "startOffset": 2536,
+          "endOffset": 2613,
+          "count": 24
+        },
+        {
+          "startOffset": 2615,
+          "endOffset": 2745,
+          "count": 0
+        },
+        {
+          "startOffset": 2745,
+          "endOffset": 2855,
+          "count": 24
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 2821,
+          "endOffset": 2845,
+          "count": 24
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 2930,
+          "endOffset": 3119,
+          "count": 4
+        },
+        {
+          "startOffset": 2980,
+          "endOffset": 3113,
+          "count": 111
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 3012,
+          "endOffset": 3101,
+          "count": 111
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}
